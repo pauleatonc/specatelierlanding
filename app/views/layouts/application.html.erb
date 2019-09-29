@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+  <head>
+    <title>SpecAtelier</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- Stylesheets
+  	============================================= -->
+  	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
+  	<link rel="stylesheets" href="css/bootstrap.css" type="text/css" />
+  	<link rel="stylesheets" href="style.css" type="text/css" />
+  	<link rel="stylesheets" href="css/dark.css" type="text/css" />
+
+    <!-- Media Agency Demo Specific Stylesheet -->
+    <link rel="stylesheets" href="demos/app-landing/app-landing.css" type="text/css" />
+    <!-- / -->
+
+    <link rel="stylesheets" href="css/font-icons.css" type="text/css" />
+    <link rel="stylesheets" href="css/et-line.css" type="text/css" />
+    <link rel="stylesheets" href="css/animate.css" type="text/css" />
+    <link rel="stylesheets" href="css/magnific-popup.css" type="text/css" />
+
+    <link rel="stylesheets" href="css/fonts.css" type="text/css" />
+
+    <!-- Bootstrap Switch CSS -->
+    <link rel="stylesheets" href="css/components/bs-switches.css" type="text/css" />
+
+    <link rel="stylesheets" href="css/responsive.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheets" href="/css/colors.css" type="text/css" />
+
+
+  </head>
+
+  <body class="stretched">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+
+  </body>
+</html>
