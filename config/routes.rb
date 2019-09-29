@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: "submits#new"
+  resources :registers
+  root to: "registers#new"
+  resources :submits
   devise_for :users, controllers: {
         sessions: 'users/sessions'
       }

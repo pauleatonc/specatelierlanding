@@ -1,0 +1,40 @@
+<div class="container">
+  <%= form_with(model: register, local: true) do |form| %>
+    <% if register.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(register.errors.count, "error") %> prohibited this register from being saved:</h2>
+
+        <ul>
+        <% register.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <div class="row">
+    <div class="field col">
+      <%= form.label :name, "Nombre" %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="field col">
+      <%= form.label :email %>
+      <%= form.text_field :email %>
+    </div>
+
+    <div class="field col">
+      <%= form.label :office %>
+      <%= form.text_field :office %>
+    </div>
+
+    <div class="field col">
+      <%= form.label :comments %>
+      <%= form.text_field :comments %>
+    </div>
+
+    <div class="actions col">
+      <%= form.submit "Enviar"%>
+    </div>
+  <% end %>
+  </div>
+</div>
