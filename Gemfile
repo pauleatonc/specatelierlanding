@@ -7,6 +7,7 @@ ruby '2.4.1'
 gem 'rails', '~> 5.2.3'
 # Use postgres as the database for Active Record
 gem 'pg'
+
 gem 'devise', git: 'https://github.com/plataformatec/devise'
 gem 'jquery-rails'
 # Use Puma as the app server

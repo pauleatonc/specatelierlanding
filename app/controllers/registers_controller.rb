@@ -28,6 +28,8 @@ class RegistersController < ApplicationController
 
     respond_to do |format|
       if @register.save
+        # Tell the UserMailer to send a welcome email after save
+        RegisterMailer.with(register: @register).welcome_email.deliver_now
         format.html { redirect_to root_path, notice: 'Register was successfully created.' }
         format.json { render :show, status: :created, location: root_path }
       else
