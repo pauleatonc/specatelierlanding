@@ -1,4 +1,5 @@
 class RegistersController < ApplicationController
+  before_action :authenticate_user!, only: [:show, :edit, :update, :destroy, :index]
   before_action :set_register, only: [:show, :edit, :update, :destroy]
 
   # GET /registers

@@ -4,33 +4,38 @@
 	============================================= -->
 	<header id="header" class="split-menu transparent-header dark" data-sticky-class="not-dark" data-responsive-class="not-dark">
 
-		<div id="header-wrap">
+		<div id="header-wrap col-lg-12 navbar-fixed-top" style="background-color: #08262c; opacity: 0.7;">
 
-			<div class="container clearfix">
+			<div class="container">
 
 				<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
 				<!-- Logo
 				============================================= -->
 				<div id="logo">
- 					<%= image_tag('logo/Logoverde.png', alt:'SpecAtelier') %>
+
 				</div><!-- #logo end -->
 
 				<!-- Primary Navigation
 				============================================= -->
-				<nav id="primary-menu" class="with-arrows clearfix not-dark">
+				<nav id="primary-menu" class="with-arrows clearfix not-dark navbar-fixed-top">
 
 					<ul class="one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="160">
 						<li><a href="#" data-href="#wrapper"><div>Inicio</div></a></li>
 						<li><a href="#" data-href="#section-nextgen"><div>Plataforma</div></a>
 						</li>
-						<li><a href="#" data-href="#submits"><div>Contacto</div></a></li>
+						<li><a href="#" data-href="#submits"><div>News Letter</div></a></li>
 					</ul>
 
 					<ul class="one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="160">
 						<li><a href="#" data-href="#section-faqs"><div>Servicio</div></a></li>
 						<li><a href="#" data-href="#section-gallery"><div>Galería</div></a></li>
-						<li><a href=" <%= new_user_session_path %> "><div>Login</div></a></li>
+						  <% if user_signed_in? %>
+								<li><%= link_to destroy_user_session_path, method: :delete do %><div>Log Out</div></li>
+									<% end %>
+								<% else %>
+								<li><a href=" <%= new_user_session_path %> "><div>Log In</div></a></li>
+							<% end %>
 					</ul>
 
 				</nav><!-- #primary-menu end -->
@@ -43,15 +48,18 @@
 
 	<section id="slider" class="slider-element full-screen slider-parallax">
 		<div class="slider-parallax-inner" style=" center center no-repeat; background-size: cover;">
-			<%= image_tag('fondo2.jpg') %>
+			<%= image_tag('fondo4b.jpg') %>
 			<div class="vertical-middle" style="z-index: 2;">
 				<div class="container dark clearfix">
 					<div class="row clearfix">
-						<div class="col-lg-6 col-md-8">
+						<div class="col-lg-6 col-md-8" style="background-color: #08262c; opacity: 0.7;">
 							<div class="emphasis-title">
-								<h1 class="font-body">Automatizamos las Especificaciones Técnicas de Arquitectura</h1>
+							<h1 class="font-body">Automatiza tus Especificaciones Técnicas de Arquitectura</h1>
 							</div>
 							<a href="#" data-scrollto="#submits" data-easing="easeInOutExpo" data-speed="1250" data-offset="160" class="button button-large button-white button-light capitalize" style="border-radius: 23px;">Recibe Noticias</a>
+						</div>
+						<div class="col-lg-5 col-md-4  col-sm-4 float">
+							<%= image_tag('logo/logo2.png', alt:'SpecAtelier', style: "opacity: 0.95;") %>
 						</div>
 					</div>
 				</div>
@@ -74,18 +82,19 @@
 					<div class="row clearfix">
 
 						<div class="col-lg-7 center">
-							<img src="demos/app-landing/images/section/iphone-watch.png" alt="NextGen Framework" data-animate="fadeInLeft">
+							<div data-animate="fadeInLeft">
+								<%= image_tag('11b.jpg') %>
+								</div>
 						</div>
 
 						<div class="col-lg-5">
 							<div class="topmargin-lg d-none d-lg-block"></div>
 							<img src="demos/app-landing/images/section/section-1-icon.png" alt="" style="display: block;" class="bottommargin-sm">
 							<div class="emphasis-title bottommargin-sm">
-								<span class="before-heading">Plug into the</span>
-								<h2 style="font-size: 42px;" class="font-body ls1 t400">NextGen Framework</h2>
+								<span class="before-heading">Facil y rápido</span>
+								<h2 style="font-size: 42px;" class="font-body ls1 t400">Autmatiza</h2>
 							</div>
-							<p style="color: #777;" class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vel! Eius pariatur nemo expedita.</p>
-							<a href="#" class="section-more-link">Learn More <i class="icon-angle-right"></i></a>
+							<p style="color: #777;" class="lead">Construye tu especificación con documentación e información técnica de las principales soluciones constructivas y productos.</p>
 						</div>
 
 					</div>
@@ -100,15 +109,16 @@
 							<div class="topmargin-lg d-none d-lg-block"></div>
 							<img src="demos/app-landing/images/section/section-2-icon.png" alt="" style="display: block;" class="bottommargin-sm">
 							<div class="emphasis-title bottommargin-sm">
-								<span class="before-heading">Retina Ready &#x7E; 534 PPI</span>
-								<h2 style="font-size: 42px;" class="font-body ls1 t400">Stunning Graphics</h2>
+								<span class="before-heading">Edita tus eett</span>
+								<h2 style="font-size: 42px;" class="font-body ls1 t400">Gestiona</h2>
 							</div>
-							<p style="color: #777;" class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vel! Eius pariatur nemo expedita.</p>
-							<a href="#" class="section-more-link">Learn More <i class="icon-angle-right"></i></a>
+							<p style="color: #777;" class="lead">Revisa, agrega, elimina y modifica. Mantén tu especificación técnica actualizada en un solo lugar de rápida forma ordenada</p>
 						</div>
 
 						<div class="col-lg-7 center">
-							<img src="demos/app-landing/images/section/iphone-nexus.png" alt="Stunning Graphics" data-animate="fadeInRight">
+							<div data-animate="fadeInRight">
+								<%= image_tag('12b.jpg') %>
+							</div>
 						</div>
 
 					</div>
@@ -116,27 +126,28 @@
 
 				<div class="line"></div><div class="clear"></div>
 
-			</div>
-
-			<div id="section-secured-solutions" class="page-section section nopadding topmargin-sm" style="background: url('demos/app-landing/images/section/iphone-3d-bg.png') no-repeat left bottom; background-size: 100% auto;" data-height-xl="700" data-height-lg="700" data-height-md="450" data-height-sm="450" data-height-xs="450">
-				<div class="container clearfix">
+				<div id="section-nextgen" class="page-section bottommargin-lg">
 					<div class="row clearfix">
-						<div class="col-lg-5 offset-lg-6">
-							<div class="topmargin-lg d-none d-lg-block"></div>
-							<div class="topmargin-lg d-none d-lg-block"></div>
-							<img src="demos/app-landing/images/section/section-3-icon.png" alt="" style="display: block;" class="bottommargin-sm">
-							<div class="emphasis-title bottommargin-sm">
-								<span class="before-heading">Privacy Protected</span>
-								<h2 style="font-size: 42px;" class="font-body ls1 t400">Secured Solutions</h2>
-							</div>
-							<p style="color: #777;" class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vel! Eius pariatur nemo expedita.</p>
-							<a href="#" class="section-more-link">Learn More <i class="icon-angle-right"></i></a>
+
+						<div class="col-lg-7 center">
+							<div data-animate="fadeInLeft">
+								<%= image_tag('13b.jpg') %>
+								</div>
 						</div>
+
+						<div class="col-lg-5">
+							<div class="topmargin-lg d-none d-lg-block"></div>
+							<img src="demos/app-landing/images/section/section-1-icon.png" alt="" style="display: block;" class="bottommargin-sm">
+							<div class="emphasis-title bottommargin-sm">
+								<span class="before-heading">Valoriza tu proyecto</span>
+								<h2 style="font-size: 42px;" class="font-body ls1 t400">Cotiza</h2>
+							</div>
+							<p style="color: #777;" class="lead">Cotiza los productos utilizados en tu especificación con los principales proveedores y valoriza tu proyecto.</p>
+						</div>
+
 					</div>
 				</div>
-				<div class="video-wrap" style="position: absolute; height: 100%; z-index: 1;">
-					<div class="video-overlay d-none d-lg-block" style="background: url('demos/app-landing/images/section/iphone-3d.png') no-repeat left top; background-size: auto 100%;" data-animate="fadeInLeft"></div>
-				</div>
+
 			</div>
 
 			<div class="clear bottommargin"></div>
@@ -149,7 +160,7 @@
 				============================================= -->
 			<div id="submits">
 				<div class="nobottommargin">
-					<h3>Recibe Noticias</h3>
+					<h3>News Letter</h3>
             <%= render 'form', register: @register %>
 				</div><!-- .postcontent end -->
 			</div>
