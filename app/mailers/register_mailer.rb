@@ -1,9 +1,9 @@
 class RegisterMailer < ApplicationMailer
-  default from: 'notifications@example.com'
+  default from: 'contacto@specatelier.com'
 
   def welcome_email
     @register = params[:register]
-    @url  = 'http://example.com/login'
+    @url  = 'http://www.specatelier.com/'
     mail(to: @register.email, subject: 'Welcome to My Awesome Site')
   end
 end
