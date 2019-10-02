@@ -70,8 +70,8 @@ Rails.application.configure do
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'specatelier.com',
-  user_name:            ENV['gmail_username'],
-  password:             ENV['gmail_password'],
+  user_name:            'contacto@specatelier.com',
+  password:             'walla2019',
   authentication:       'plain',
   enable_starttls_auto: true }
   config.action_mailer.default_url_options = { host: "localhost:3000"}
